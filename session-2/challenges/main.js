@@ -81,4 +81,7 @@ let isItRaining = false;
 
 let response = null; // empty value
 
-// undefined - var declared but not initialised (value not assigned)
+// undeined - var declared but not initialised (value not assigned)
+
+// Checking variable type
+console.log(typeof productInfo);
