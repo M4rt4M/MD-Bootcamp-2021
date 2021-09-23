@@ -73,6 +73,13 @@ productInfo.reviews.push(review);
 
 console.log(productInfo);
 
+let name = "Wheelie The Bike"
+let bike = {
+    name, // in ES6 there is no need to do name: name
+};
+
+console.log(bike);
+
 // Boolean
 
 let isItRaining = false;
@@ -85,3 +92,51 @@ let response = null; // empty value
 
 // Checking variable type
 console.log(typeof productInfo);
+
+// Multidimensional array
+
+let shoppingBasket = [
+    ["Appple", 3, 0,22],
+    ["Pears", 1, 0.45],
+];
+
+console.log(`this should be apple: ${shoppingBasket[0][0]}`);
+
+// JSON - js object notation
+
+const person = { // not JSON
+    name: "Mary",
+    age: 23,
+    address: {
+        street: "Some Drive",
+        number: 12,
+        postcode: "AB1 0CD"
+    }
+};
+
+console.log("Person object", person);
+console.log("Person as JSON", JSON.stringify(person));
+
+const car = {
+    make: "Ford",
+    model: "Fiesta",
+    describe () {
+        return `${this.make} ${this.model}`
+    }
+};
+
+console.log(car.describe());
+
+const personAsStr = JSON.stringify(person); // to JSON
+console.log(personAsStr);
+
+const personAsObj = JSON.parse(personAsStr); // back to object
+console.log(personAsObj);
+
+// NB. If you add a function to an object, you won't be able to turn it back to JSON
+
+// Date
+
+const dateNow = new Date();
+
+console.log(dateNow);
