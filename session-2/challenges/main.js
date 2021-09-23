@@ -48,3 +48,37 @@ console.log(anotherNote);
 
 let names = ['John', 'Lauren', 'Art'];
 let mixedArray = [13, 'hello', 0.76];
+
+names.push('Bob');
+console.log(names);
+
+// Object
+
+const productInfo = {
+    name: "heater",
+    manufacturer: "Toshiba",
+    price: 99.99,
+    reviews: [], // the comma at the end is okay for some reason
+};
+
+console.log(productInfo);
+
+const review = {
+    date: new Date(),
+    comment: "It was hot",
+    stars: 3,
+}
+
+productInfo.reviews.push(review);
+
+console.log(productInfo);
+
+// Boolean
+
+let isItRaining = false;
+
+// null
+
+let response = null; // empty value
+
+// undefined - var declared but not initialised (value not assigned)
