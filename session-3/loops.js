@@ -15,3 +15,7 @@ for (let i = 0; i <numbers.length; i++) {
 };
 
 // while loop
+
+// array function forEach
+
+// chaining higher order functions
