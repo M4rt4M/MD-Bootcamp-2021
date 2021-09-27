@@ -22,7 +22,7 @@ if (strokes == 1) {
 
 console.log(phrase); */
 
-function golf(par, strokes) {
+const golf = (par, strokes) => {
     if (strokes == 1) {
         return names[0];
     } else if (strokes <= par-2) {
