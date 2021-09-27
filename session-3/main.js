@@ -112,3 +112,19 @@ const fruit = ["apple", "banana", "cherry"];
 const fruitResult = fruit.some(fruit => fruit == "apple");
 
 console.log(fruitResult);
+
+// SOME with objects
+
+const footballTeams = [
+    {
+        name: 'Manchester United',
+        nationality: ['English', 'French']
+    },
+    {
+        name: 'Liverpool',
+        nationality: ['Brazilian', 'Irish']
+    }
+];
+
+const hasEngPlayer = footballTeams.some(team => team.nationality.includes('English'));
+console.log('hasEngPlayer: ', hasEngPlayer);
