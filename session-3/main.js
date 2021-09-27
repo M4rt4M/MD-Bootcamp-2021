@@ -137,7 +137,7 @@ let numbers = [234, 45, 12, 87, 9];
 const sortNumbers = [...numbers].sort(function(a, b) {
     return a== b 
             ? 0 : a > b 
-            ? 1 : -1;
+            ? 1 : -1; // should work with return a-b
 });
 console.log('Unsorted: ', numbers, ', Sorted: ', sortNumbers);
 
@@ -183,3 +183,31 @@ const myPet = pets.pop();
 // Unshift
 pets.unshift('hamster');
 console.log('What is left in the array: ', pets);
+
+// Object destructuring
+
+const person = {
+    name: 'John',
+    address: {
+        street: '1st Street',
+        city: 'Manchester',
+        postcode: 'M1'
+    },
+    hobbies: ['sports', 'music', 'gardening']
+}
+
+const {
+    name, 
+    address: {
+        city
+    }, 
+    hobbies}= person
+console.log('Name', name);
+console.log('Hobbies', hobbies);
+console.log('City', city);
+
+// Array destructuring - use square brackets
+
+const myList = ['a', 'b', 'c', 'd'];
+const [letter1, letter2,,letter4] = myList;
+console.log('My chosen letters are ', letter1, letter2, letter4);
