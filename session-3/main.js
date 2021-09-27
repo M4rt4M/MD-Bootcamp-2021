@@ -128,3 +128,34 @@ const footballTeams = [
 
 const hasEngPlayer = footballTeams.some(team => team.nationality.includes('English'));
 console.log('hasEngPlayer: ', hasEngPlayer);
+
+// SORT
+let words = ['numbers', 'letters', 'alphabet'];
+console.log(words.sort()); // natural siorting - like strings
+
+let numbers = [234, 45, 12, 87, 9];
+const sortNumbers = [...numbers].sort(function(a, b) {
+    return a== b 
+            ? 0 : a > b 
+            ? 1 : -1;
+});
+console.log('Unsorted: ', numbers, ', Sorted: ', sortNumbers);
+
+let animals = ['lion', 'Zebra', 'turtle'];
+console.log(animals.sort());
+
+const sortedCaseInsensitiveAnimals = [...animals].sort((a, b) => {
+    let firstAsUpper = a.toUpperCase();
+    let secondAsUpper = b.toUpperCase();
+  
+    if (firstAsUpper === secondAsUpper) {
+      return 0;
+    } else if (firstAsUpper > secondAsUpper) {
+      return 1;
+    } 
+    
+    return -1;
+  });
+  
+  console.log("sorted Animals ignoring case", sortedCaseInsensitiveAnimals);
+  
