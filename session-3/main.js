@@ -159,3 +159,27 @@ const sortedCaseInsensitiveAnimals = [...animals].sort((a, b) => {
   
   console.log("sorted Animals ignoring case", sortedCaseInsensitiveAnimals);
   
+// Push
+const places = [];
+
+places.push(
+    {
+    name: 'Barcelona',
+    population: 100_000_000
+    },
+    {
+    name: 'Manchester',
+    population: 50_000_000
+    }
+);
+
+console.log(places);
+
+// Pop
+let pets = ['dog', 'cat', 'rabbit'];
+const myPet = pets.pop();
+//console.log('What is left in the array: ', pets);
+
+// Unshift
+pets.unshift('hamster');
+console.log('What is left in the array: ', pets);
