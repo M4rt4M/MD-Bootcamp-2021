@@ -211,3 +211,23 @@ console.log('City', city);
 const myList = ['a', 'b', 'c', 'd'];
 const [letter1, letter2,,letter4] = myList;
 console.log('My chosen letters are ', letter1, letter2, letter4);
+
+// Operators
+let a = 1;
+
+a++; //increment by 1 (post)
+++a; //(pre)
+
+a += 3; //increment by a number different from 0
+a -=2;
+
+let modulus = a % 2; //remainder from division
+
+// Equality (forces change of the data type)
+let classSize = '14';
+
+console.log((classSize == 14) ? true : false); // same with !=
+
+// Strict equality (includes data type check)
+console.log((classSize === 14) ? true : false); 
+// same with !== for strict negation
