@@ -13,3 +13,5 @@ for (let i = 0; i <numbers.length; i++) {
     const doubled = numbers[i]*2;
     console.log(doubled);
 };
+
+// while loop
