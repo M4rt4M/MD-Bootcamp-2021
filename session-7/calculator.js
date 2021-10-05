@@ -15,8 +15,13 @@ function divide(num1, num2) {
     return num1/num2;
 };
 
-console.log(divide(3,1));
+//console.log(divide(3,1));
+
+const PI = 3.14;
+const TRAFFIC_LIGHTS = ['red', 'yellow', 'green'];
 
 module.exports = 
 {add,
-divide}
+divide,
+PI,
+TRAFFIC_LIGHTS}

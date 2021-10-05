@@ -2,7 +2,6 @@ const seekAndDestroy = (array, ...toBeRemoved) => {
     tempArray = [...array];
     for (i = 0; i < tempArray.length; i++) {
         if (tempArray.indexOf(toBeRemoved[i]) > 0) {
-            console.log(tempArray.indexOf(toBeRemoved[i]));
             tempArray.splice(tempArray.indexOf(toBeRemoved[i]), 1)
             // elements that we want to remove that are present in the array
         }
