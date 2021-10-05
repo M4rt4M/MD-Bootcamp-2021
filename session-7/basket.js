@@ -1,5 +1,5 @@
-import getCourierByKey from "C:/Users/Marta/Documents/Bootcamp21/session-7/courier-utils.js";
-import {getCustomerById} from "C:/Users/Marta/Documents/Bootcamp21/session-7/customer-utils.js";
+const {getCourierByKey} = require("C:/Users/Marta/Documents/Bootcamp21/session-7/courier-utils.js");
+const {getCustomerById} = require("C:/Users/Marta/Documents/Bootcamp21/session-7/customer-utils.js");
 
 
 const transactionDetails = {
@@ -14,3 +14,5 @@ console.log(customer);
 const courierAddress = getCourierByKey(transactionDetails.courier);
 
 console.log(courierAddress);
+
+// debugged by reverting from ES6 modularisation to ES5 (issue with node.js)

@@ -5,14 +5,22 @@ const customers = [{
         street: "Some Customer Street"}
     }];
 
-export function getCustomerById(id) {
+function getCustomerById(id) {
     const customer = customers.filter((customer) => customer.id === id);
     console.log(customer);
     
-    return addPriveledges(id, customer);
+    return addPrivileges(id, customer);
 };
 
-function addPriviledges(id, customer) {
-    //let if return - need to finish
-}
+function addPrivileges(id, customer) {
+    let customerWithPrivilege = { ...customer };
+  
+    if (id === 1) {
+      customerWithPrivilege.rank = "Gold";
+    }
+  
+    return customerWithPrivilege;
+  }
+
+  module.exports = {getCustomerById}
 
