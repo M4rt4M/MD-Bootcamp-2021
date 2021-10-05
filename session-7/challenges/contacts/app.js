@@ -88,15 +88,21 @@ window.addEventListener("load", renderNames);
 const namesList = document.getElementById("namesList"); 
 const filterInput = document.getElementById("filterInput");
 
-filterInput.addEventListener("keyup", filterNames);
-
+currentNames = [];
 const filterNames = (event) => { 
   //get hold of the names-list: namesList
   const currentValueEntered = event.target.value;
-  const currentNames = document.getElementsByTagName("a");
+  const collectionNames = document.getElementsByTagName("a");
+
+  collectionNames.forEach((element) => currentNames.push(element));
+  /* app.js:97 Uncaught TypeError: collectionNames.forEach is not a function
+    at HTMLInputElement.filterNames (app.js:97) */
+  
   if (currentNames.innerText.includes(currentValueEntered)) {
     currentNames.style.display = "block";
   } else {
     currentNames.style.display = "none";
   }
 };
+
+filterInput.addEventListener("keyup", filterNames);
