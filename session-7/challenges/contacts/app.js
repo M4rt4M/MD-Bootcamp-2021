@@ -85,23 +85,60 @@ window.addEventListener("load", renderNames);
 
 // Your code can go here ...
 
-const namesList = document.getElementById("namesList"); 
-const filterInput = document.getElementById("filterInput");
+// Kallum + Lauren
+/*console.log("I still need fixing, sowwy")
 
-currentNames = [];
+//Get selectors
+const wordInput = document.getElementById('filterInput');
+const listOfNames = document.querySelectorAll('.collection-item'); // asked for html to add these
+const listOfHeaders = document.querySelectorAll('.collection-header'); // asked for html to add these
+
+//add event listener to the text input
+wordInput.addEventListener('keyup', function(event) {
+
+  const currentInput = event.target.value;
+  const currentInputCap = currentInput.toUpperCase();
+
+
+  let capitalLetters = [];
+  listOfNames.forEach(element => {
+    if(!element.innerText.toUpperCase().includes(currentInputCap)){
+      element.style.display = "none";
+    } else {
+      capitalLetters.push(element.innerText.slice(0,1));
+      element.style.display = "block";
+    }
+  });
+    // console.log(capitalLetters);
+  
+  listOfHeaders.forEach(element => {
+    if(!capitalLetters.includes(element.innerText)){
+      element.style.display = "none";
+    } else {
+      element.style.display = "block";
+    }
+  });
+})
+*/
+
+
+// Michael and mua
+
+const filterInput = document.getElementById('filterInput');
+
+
+const collectionNames = [];
 const filterNames = (event) => { 
   //get hold of the names-list: namesList
   const currentValueEntered = event.target.value;
-  const collectionNames = document.getElementsByTagName("a");
-
-  collectionNames.forEach((element) => currentNames.push(element));
-  /* app.js:97 Uncaught TypeError: collectionNames.forEach is not a function
-    at HTMLInputElement.filterNames (app.js:97) */
+  collectionNames.push(document.getElementsByTagName("a").forEach((element) => element.innerText));
   
-  if (currentNames.innerText.includes(currentValueEntered)) {
-    currentNames.style.display = "block";
-  } else {
+  console.log(collectionNames);
+
+  if (!collectionNames.includes(currentValueEntered)) {
     currentNames.style.display = "none";
+  } else {
+    currentNames.style.display = "block";
   }
 };
 
