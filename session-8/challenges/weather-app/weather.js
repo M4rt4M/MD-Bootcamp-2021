@@ -1,4 +1,4 @@
-import weatherAPIKey from './keys,js';
+import weatherAPIKey from './keys.js';
 
 const weatherAPIUrl = `http://api.weatherapi.com/v1/current.json?key=${weatherAPIKey}`;
 
