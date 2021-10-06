@@ -12,9 +12,9 @@ class Item { //object template
 };
 
 class ShoppingBasket extends Item { //inherits item
-    constructor(total, items) {
+    constructor(total, item) {
         this.total = 0;
-        this.items = items;
+        super(item);
     }
     
     /*setNewItem(newItem) { // changed
