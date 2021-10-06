@@ -14,7 +14,7 @@ class Item { //object template
 class ShoppingBasket extends Item { //inherits item
     constructor(total, item) {
         this.total = 0;
-        super(item);
+        this.items = items; // needs to be inherted
     }
     
     /*setNewItem(newItem) { // changed
