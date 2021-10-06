@@ -1,11 +1,14 @@
 console.log("Start");
 
-const dbPassword = 'abc';
+const dbPassword = '12345!';
 
 const fetchUserProfile = (callback) => {
     setTimeout(( ) => {
-        callback();
-    }, 2000)
+        callback({
+            id: 2,
+            profile: "@johndoe",
+          });
+    }, 3000)
 };
 
 const logInUser = (username, password, callback, failureCallback) => {
@@ -15,7 +18,7 @@ const logInUser = (username, password, callback, failureCallback) => {
             //matched
             callback({account: username});
         } else {
-            failureCallback({message: "Log in unsuccessful"})
+            failureCallback({message: "Passwords do not match"})
         }
         
     }, 2000);
@@ -31,6 +34,9 @@ const loggedInUser = logInUser(
     '12345!', 
     (userReceived) => {
     console.log("Received user", userReceived);
+    fetchUserProfile((profile) => {
+        console.log("Profile received", profile)
+    });
     //here you can e.g. fetch user profile
     //you'd have another callback waiting for data to load 
 },
@@ -40,3 +46,26 @@ const loggedInUser = logInUser(
 ); // add 3rd parameter - userReceived is an object created by logInUser
 
 console.log("End");
+
+// Can lead to CALLBACK HELL
+
+/*
+retrieveUserLikedProgrammes(userDataReceived.account, (likedProgrammes) => {
+        console.log("likedProgrammes", likedProgrammes);
+        retrieveProgrammeDetail(likedProgrammes[0], (details) => {
+            console.log("Details for programme", details);
+            retrieveBlahA(..., () => {
+// A ...
+                retrieveBlahB(..., () => {
+/// B ...
+                    retrieveBlahC(..., () => {
+// C ...
+                        retrieveBlahD(..., () => {
+/// D ..
+                            }) 
+                        })
+                        }) 
+                    })
+                }) 
+            })
+*/
