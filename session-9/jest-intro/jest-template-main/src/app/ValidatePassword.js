@@ -1,7 +1,7 @@
 export const validatePassword = (password) => {
-    if (password.length>=8 && /[a-z]/.test(password)) {
-        return true;
-    }
+    const hasValidLength = password.length>=8;
+    const hasCharacter = /[a-z]/.test(password);
+    const hasNumber = /[0-9]/.test(password);
     
-    return false;
+    return hasValidLength && hasCharacter && hasNumber;
 };

@@ -14,7 +14,21 @@ describe("Validate Password", () => {
 
     it ("Returns false when only numbers are in password", () => {
         const password = "12345678"
-        expect(validatePassword("")).toBe(false);
+        expect(validatePassword(password)).toBe(false);
+    });
+
+    it ("Returns false when only letters are in password", () => {
+        const password = "asdfghjk"
+        expect(validatePassword(password)).toBe(false);
+    }); 
+    
+    it ("Returns false when only capitalletters are in password", () => {
+        const password = "AAAAAAAA"
+        expect(validatePassword(password)).toBe(false);
+    });
+
+    it ("Returns false when password is less than 8 in length", () => {
+        const password = "123aa"
         expect(validatePassword(password)).toBe(false);
     });
 
