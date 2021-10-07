@@ -57,8 +57,13 @@ describe("fizzBuzz", () => {
 })
 
 describe("fizzBuzzRange", () => {
-    /*it("should throw an error if input is not array", () => {
-        let input = 'a';
-        expect(() => fizzBuzz(input)).toThrow("The input must be array")
-    })*/
+    it("should throw an error if input is not a number", () => {
+        let input1 = 'a';
+        let input2 = ' ';
+        expect(() => fizzBuzz(input1, input2)).toThrow("The input must be a number")
+    });
+
+    // it should throw an error if input1 >= input2
+
+    // it should throw error for negative numbers
 })
