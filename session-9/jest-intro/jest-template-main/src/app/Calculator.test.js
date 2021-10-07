@@ -31,7 +31,7 @@ describe("Calculator: ", () => {
     });
 
     // You can organise tests further into smaller blocks
-    describe.skip("Edge Cases:", () => {
+    describe("Invalid Inputs:", () => {
         // organising tests is useful e.g. when you need to skip certain category of tests
         // convention: test() for a single one, describe() + it()
         it("Should not add text when adding numbers", () => {
@@ -44,6 +44,10 @@ describe("Calculator: ", () => {
             // Assert
             expect(result).toBe(6);
         })
-    })
+
+        it.skip("Should throw error when dividing by zero", () => {
+            // expect(() => divide(2, 0)) //finish this block
+        })
+    });
 });
 
