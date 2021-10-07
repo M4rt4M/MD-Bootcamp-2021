@@ -4,7 +4,6 @@ example: (0 × 9/5) + 32 = 32
 
 F to C: (temp_F − 32) × 5/9 = temp_C
 
-
 5F => -15C
 14F => -10C
 23F => -5C
@@ -21,6 +20,7 @@ Check if input is a number
 export const cToF = (tempInC) => {
     let result;
 
+    // better: if typeof != number, throw an error
     if (typeof tempInC === "number") {
         result = (tempInC * (9/5)) + 32;
     } else if (tempInC < -273.15) {

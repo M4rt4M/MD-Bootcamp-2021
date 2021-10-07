@@ -1,4 +1,4 @@
-import {cToF, fToC, convert} from "./Conversions"
+import {cToF, fToC, convert} from "./TempConversion"
 
 /*
     0C => 32F
@@ -31,9 +31,9 @@ describe("Conversions", () => {
         });
 
         it("should throw error with input of -273.15", () => {
-            const result = cToF(-300);
-            expect(result).toThrow("Temperature too low");
-        })
+            // const result = cToF(-300);
+            expect( () => cToF(-300).toThrow("Temperature too low"));
+
     });
 
     describe("Fahren to Celsius:", () => {
@@ -71,4 +71,6 @@ describe("Conversions", () => {
         });
     });
     
-});
+})
+
+})
