@@ -31,7 +31,9 @@ describe("Calculator: ", () => {
     });
 
     // You can organise tests further into smaller blocks
-    describe("Edge Cases:", () => {
+    describe.skip("Edge Cases:", () => {
+        // organising tests is useful e.g. when you need to skip certain category of tests
+        // convention: test() for a single one, describe() + it()
         it("Should not add text when adding numbers", () => {
             // Arrange
             const arr = [1, 2, 3, "hello", "5"];
