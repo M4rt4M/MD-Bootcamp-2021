@@ -15,13 +15,12 @@ describe("Shopping Basket: ", () => {
         expect(shoppingBasket.items.length).toBe(0);
     });
 
-    it.skip("Should add apples to shopping basket", () => {
-        // need to finish this one
-        const Item = "apples";
+    it("Should add apples to shopping basket", () => {
+        const item = "apples";
 
-        const result = shoppingBasket.addItems(Item);
+        shoppingBasket.addItems(item);
 
-        expect(result).items.toBe(["apples"]);
+        expect(shoppingBasket.items).toContain(item);
     });
 
     // teardown
