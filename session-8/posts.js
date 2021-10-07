@@ -3,8 +3,6 @@ const URL = 'https://jsonplaceholder.typicode.com/posts'
 
 //NB. fetch returns a promise
 
-//fetch(URL).then(response => console.log(response));
-
 const displayPosts = (posts) => {
     console.log(posts);
   

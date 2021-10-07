@@ -15,7 +15,7 @@ const getWeather = async (event) => {
 
     const placeNameField = document.getElementById("placeId");
 
-    const requestUrl = `${weatherAPIUrl}&q${placeNameField.value}&api=no`
+    const requestUrl = `${weatherAPIUrl}&q=${placeNameField.value}&api=no`
 
     try {
         const response = await fetch(requestUrl);
@@ -43,4 +43,4 @@ const getWeather = async (event) => {
     };
     
 
-submitBtn.addEventListener("clcik", getWeather);
+submitBtn.addEventListener("click", getWeather);
