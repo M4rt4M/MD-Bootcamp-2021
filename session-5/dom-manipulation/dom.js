@@ -13,7 +13,7 @@ const paragraph = document.querySelector(".paragraph");
 
 console.log(paragraph.innerText);
 
-paragraph.innerText = "Hello World!";
+paragraph.innerText = "There used to be a cool paragraph with cat breeds before js file kicked in and changed this section based on class selector.";
 
 // Select All Matching same class of 'item':
 const allListItems = document.querySelectorAll(".item");
