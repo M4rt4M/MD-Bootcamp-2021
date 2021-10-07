@@ -45,9 +45,9 @@ describe("Calculator: ", () => {
             expect(result).toBe(6);
         })
 
-        it.skip("Should throw error when dividing by zero", () => {
-            // expect(() => divide(2, 0)) //finish this block
-        })
+        it("Should throw error when dividing by zero", () => {
+            expect(() => divide(2, 0)).toThrow("You can't divide by zero") //finish this block
+        });
     });
 });
 
