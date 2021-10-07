@@ -1,4 +1,4 @@
-import weatherAPIKey from './keys.js';
+import {weatherAPIKey} from './keys.js';
 
 const weatherAPIUrl = `http://api.weatherapi.com/v1/current.json?key=${weatherAPIKey}`;
 
@@ -19,11 +19,28 @@ const getWeather = async (event) => {
 
     try {
         const response = await fetch(requestUrl);
-        const data = await response.json();
-        console.log(data);
-    } catch (err) {
-        console.log(err);
-    }
-}
+        const {
+          location: { name },
+          current: {
+            temp_c,
+            condition: { icon },
+          },
+        } = await response.json();
+    
+        temperatureHeading.innerHTML = `${temp_c} &deg;C`;
+        locationNameHeading.innerHTML = name;
+    
+        const weatherIcon = document.createElement("img");
+        weatherIcon.src = icon;
+    
+        weatherResult.removeChild(weatherResult.lastChild);
+        weatherResult.appendChild(weatherIcon);
+    
+        placeNameField.value = "";
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    
 
 submitBtn.addEventListener("clcik", getWeather);
