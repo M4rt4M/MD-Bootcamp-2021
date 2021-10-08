@@ -60,10 +60,19 @@ describe("fizzBuzzRange", () => {
     it("should throw an error if input is not a number", () => {
         let input1 = 'a';
         let input2 = ' ';
-        expect(() => fizzBuzz(input1, input2)).toThrow("The input must be a number")
+        expect(() => fizzBuzzRange(input1, input2)).toThrow("The input must be a number")
     });
 
-    // it should throw an error if input1 >= input2
+    it("should throw an error if input1 >= input2", () => {
+        expect(() => fizzBuzzRange(2, 0)).toThrow("The input2 must be higher than input1")
+    });
+
+    // it should throw an error if no input given
 
     // it should throw error for negative numbers
+
+    it("should return the correct array given the range", () => {
+        expect(fizzBuzzRange(1, 7)).toBe("1, 2, fizz, 4, buzz, fizz, 7");
+        expect(fizzBuzzRange(3, 17)).toBe("fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz, 16, 17");
+    });
 })

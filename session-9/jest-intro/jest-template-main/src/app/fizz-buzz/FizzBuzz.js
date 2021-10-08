@@ -22,20 +22,24 @@ export const fizzBuzzRange = (num1, num2 = num1 + 5) => {
 
     let result = [];
 
-    if (typeof num1 !== "number" || num2 !== "number"){
+    if (typeof num1 !== "number" && num2 !== "number"){
         throw new Error("The input must be a number");
     }
 
+    if (num1 >= num2){
+        throw new Error("The input2 must be higher than input1");
+    } //test for this doesn't work
+    
     for (let i = num1; i <= num2; i++) {
         result.push(fizzBuzz(i));
     }
 
     
-    return result;
+    return result.join(", ");
 }
 
-
-const result = document.getElementById("result-text");
+// below is an attempt to turn it into a web app
+/*const result = document.getElementById("result-text");
 const submitBtn = document.querySelector(".submit-btn");
 
 const getSequence = (event) => {
@@ -48,5 +52,5 @@ const getSequence = (event) => {
 
 }
 
-submitBtn.addEventListener("click", getSequence);
+submitBtn.addEventListener("click", getSequence); */
 
