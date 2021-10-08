@@ -33,7 +33,6 @@ describe("fizzBuzz", () => {
         expect(fizzBuzz(9)).toBe("fizz");
     })
 
-
     // multiple of 5
     it("should return 'buzz' if it's a multiple of 5", () => {
         let input = 5;
@@ -53,6 +52,19 @@ describe("fizzBuzz", () => {
     it("should return the number itself if not divisible by either 3 or 5", () => {
         expect(fizzBuzz(1)).toBe(1);
         expect(fizzBuzz(7)).toBe(7);
+    })
+
+    describe("FizzBuzz with each", () => {
+        it.each([
+            [7, 7],
+            [12, "fizz"],
+            [18, "fizz"],
+            [55, "buzz"],
+            [45, "fizzbuzz"]
+        ])(`given %s should return %i`, (input, expected) => {
+            const result = fizzBuzz(input);
+            expect(result).toBe(expected);
+        })
     })
 })
 
