@@ -4,7 +4,7 @@ describe("StringCalculator", () => {
 
     it("should return 0 if given empty string", () => {
         const result = calculator("");
-        expect(result).toBe(0)
+        expect(result).toBe(0);
     });
 
 });
