@@ -18,3 +18,8 @@ It was searching for a mouse to eat.
 console.log(atRE.exec(phrase)); //search globally for the match
 
 //https://regexr.com/
+
+const phone = "123-999"
+const arRE = /[0-9]{3}/g;
+
+//console.log("Matches", phone.matches(areRE));
