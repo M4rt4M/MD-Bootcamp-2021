@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
+import TravelBlogList from "../components/blogs/TravelBlogList";
 
 const BLOG_DATA = [
     {
         id: 1,
         title: "This is my first trip to Paris",
-        image: "https://en.wikipedia.org/wiki/Paris#/media/File:La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques,_Paris_ao%C3%BBt_2014_(2).jpg",
-        address: "Tour Saint-Jacques, Paris, France",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/1600px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg",
+        address: "Tour Saint-Jacques",
         city: "Paris",
         description: "This place was so romantic!",
     },
@@ -20,17 +21,14 @@ const BLOG_DATA = [
       },
 ];
 
-const AllTravelBlog = () => {
+const AllTravelBlogs = () => {
     return (
-        <section>
-            <h1>All Travel Blog</h1>
-            <ul>
-                {BLOG_DATA.map((travelBlog) => {
-                    return <li key={travelBlog.id}>{travelBlog.title}</li>
-                })}
-            </ul>
-        </section>
-    )
-};
-
-export default AllTravelBlog;
+      <section>
+        <h1>All Travel Blogs</h1>
+  
+        <TravelBlogList blogs={BLOG_DATA} />
+      </section>
+    );
+  };
+  
+  export default AllTravelBlogs;
