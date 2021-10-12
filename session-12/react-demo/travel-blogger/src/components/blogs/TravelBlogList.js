@@ -16,6 +16,21 @@ const TravelBlogList = ({ blogs }) => {
           address={blog.address}
           city={blog.city}
         />
+
+  // Alternative:
+  /* // destructure each blog:
+  const { id, image, title, description, address, city } = blog;
+
+  return (
+    <TravelBlogItem
+      key={id}
+      id={id}
+      image={image}
+      title={title}
+      description={description}
+      address={address}
+      city={city}
+    /> */
       ))}
     </ul>
   );
