@@ -1,0 +1,19 @@
+{
+  "name": "challenge-day",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "author": "Marta Majewska",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.15.8",
+    "jest": "^27.2.5"
+  },
+  "dependencies": {
+    "@types/jest": "^27.0.2"
+  },
+  "keywords": []
+}
